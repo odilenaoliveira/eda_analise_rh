@@ -1,8 +1,6 @@
 import streamlit as st 
 import pandas as pd
-import numpy as np
 import seaborn as sns 
-import matplotlib.pyplot as plt
 import warnings
 warnings.filterwarnings('ignore')
 sns.set_style('darkgrid')
@@ -11,6 +9,16 @@ color = ['#ED72A3','#8565F0','#22559C', '#F27370','#FA9856','#EDE862']
 # carregando os dados
 df = pd.read_csv('HR-Employee-Attrition.csv')
 df.drop(['EmployeeCount','EmployeeNumber','StandardHours','Over18'],axis=1,inplace=True)
+
+st.title('Visualização em Geral')
+st.markdown(''' 
+    Para ampliar as imagens arraste o mouse em cima do gráfico, ao lado esquerdo da tela, verá **duas setas** oposta,
+    clique e a imagem ampliará.
+    O conjunto de dados se trata da existência de atritos nas profissões entre os gêneros, quanto tempo uma pessoa
+    trabalhou na empresa, se teve promoção, em qual cargo e qual média da renda por gênero.
+    Abaixo, você pode usar os filtros e fazer a comparação entre os sexo masculino e feminino, cargo, 
+    profissão.
+''')
 
 #todo: estrutura da página
 

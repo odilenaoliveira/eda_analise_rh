@@ -25,7 +25,12 @@ df.drop(['EmployeeCount','EmployeeNumber','StandardHours','Over18'],axis=1,inpla
 
 #? estrutura da página
 st.title('Visualização Geral')
-
+st.markdown(''' 
+    Para ampliar as imagens arraste o mouse em cima do gráfico, ao lado esquerdo da tela, verá **duas setas** oposta,
+    clique e a imagem ampliará.
+    O conjunto de dados se trata da existência de atritos nas profissões entre os gêneros, quanto tempo uma pessoa
+    trabalhou na empresa, se teve promoção, em qual cargo e qual média da renda por gênero.
+''')
 #? ------------------------------
 tab1,tab2 = st.tabs(['gráfico1','gráfico2'])
 
